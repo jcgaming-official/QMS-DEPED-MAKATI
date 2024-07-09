@@ -95,9 +95,9 @@
             label1.ForeColor = Color.Yellow;
             label1.Location = new Point(464, 40);
             label1.Name = "label1";
-            label1.Size = new Size(123, 19);
+            label1.Size = new Size(247, 19);
             label1.TabIndex = 1;
-            label1.Text = "DEPED MAKATI ";
+            label1.Text = "DEPED MAKATI DIVISION OFFICE";
             label1.Click += label1_Click;
             // 
             // pictureBox1

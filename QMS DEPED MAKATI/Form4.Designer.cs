@@ -31,15 +31,18 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             panel1 = new Panel();
+            groupBox1 = new GroupBox();
             label1 = new Label();
             panel2 = new Panel();
             panel5 = new Panel();
+            label4 = new Label();
             label3 = new Label();
             panel3 = new Panel();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
+            panel6 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
@@ -49,12 +52,25 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(panel6);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(301, 741);
             panel1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackgroundImageLayout = ImageLayout.None;
+            groupBox1.Dock = DockStyle.Fill;
+            groupBox1.Location = new Point(0, 80);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(301, 661);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
             // 
             // label1
             // 
@@ -77,6 +93,7 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(label4);
             panel5.Controls.Add(label3);
             panel5.Dock = DockStyle.Right;
             panel5.Location = new Point(782, 0);
@@ -84,10 +101,20 @@
             panel5.Size = new Size(200, 80);
             panel5.TabIndex = 0;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(18, 17);
+            label4.Name = "label4";
+            label4.Size = new Size(50, 21);
+            label4.TabIndex = 2;
+            label4.Text = "Date";
+            label4.Click += label4_Click;
+            // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(71, 25);
+            label3.Location = new Point(74, 50);
             label3.Name = "label3";
             label3.Size = new Size(46, 21);
             label3.TabIndex = 1;
@@ -140,6 +167,14 @@
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
+            // panel6
+            // 
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(301, 80);
+            panel6.TabIndex = 0;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
@@ -178,5 +213,8 @@
         private Panel panel5;
         private Label label3;
         private System.Windows.Forms.Timer timer1;
+        private Label label4;
+        private GroupBox groupBox1;
+        private Panel panel6;
     }
 }

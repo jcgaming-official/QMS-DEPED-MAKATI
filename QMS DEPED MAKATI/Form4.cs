@@ -20,6 +20,7 @@ namespace QMS_DEPED_MAKATI
         private void Form4_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            label4.Text = DateTime.Now.ToLongDateString();
             label3.Text = DateTime.Now.ToLongTimeString();
         }
 
@@ -27,6 +28,11 @@ namespace QMS_DEPED_MAKATI
         {
             label3.Text = DateTime.Now.ToLongTimeString();
             timer1.Start();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
