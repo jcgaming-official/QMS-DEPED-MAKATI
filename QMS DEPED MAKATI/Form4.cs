@@ -16,5 +16,17 @@ namespace QMS_DEPED_MAKATI
         {
             InitializeComponent();
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            label3.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label3.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
+        }
     }
 }

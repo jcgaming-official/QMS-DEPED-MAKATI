@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADgCAIAAAB6jZaIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7s/QVcVs+6No4vu1tsBQSVLikB6ZIQUEFREBULu7u7u752d3cH3aCI
+        wAAADsABataJCQAA/7JJREFUeF7s/QVcVs+6No4vu1tsBQSVLikB6ZIQUEFREBULu7u7u752d3cH3aCI
         BUg3T3fO/3oYv8/x3efsc84+v332e/Z7/vdnfYZZs2ZmTVxz3fc9az0LhvyvFIVCIZVKZTKZSqX6lfSb
         IFH5p9C4/E/R5hcKhSiuVqvpKfKIRCIul6uUK3AoZHIcctxBIqUHQUY1UStVNELjYqGIFodoq6JCb/3r
         5E9Bs3/F/lX+/4flfyNGMbuYfiq/kv4UCsffofAXgksQZPt13lgEKdqqgEugU6VQarH4+wH4SsUSZPiX
@@ -1742,4 +1742,7 @@
         QmCC
 </value>
   </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            panel5 = new Panel();
+            label3 = new Label();
             panel3 = new Panel();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
-            panel5 = new Panel();
-            label3 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel5.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -72,6 +74,24 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(982, 80);
             panel2.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(label3);
+            panel5.Dock = DockStyle.Right;
+            panel5.Location = new Point(782, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(200, 80);
+            panel5.TabIndex = 0;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(71, 25);
+            label3.Name = "label3";
+            label3.Size = new Size(46, 21);
+            label3.TabIndex = 1;
+            label3.Text = "Time";
             // 
             // panel3
             // 
@@ -115,23 +135,10 @@
             panel4.Size = new Size(982, 581);
             panel4.TabIndex = 3;
             // 
-            // panel5
+            // timer1
             // 
-            panel5.Controls.Add(label3);
-            panel5.Dock = DockStyle.Right;
-            panel5.Location = new Point(782, 0);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(200, 80);
-            panel5.TabIndex = 0;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(71, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(46, 21);
-            label3.TabIndex = 1;
-            label3.Text = "Time";
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
             // 
             // Form4
             // 
@@ -147,14 +154,15 @@
             Name = "Form4";
             Text = "Form4";
             WindowState = FormWindowState.Maximized;
+            Load += Form4_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -169,5 +177,6 @@
         private Label label2;
         private Panel panel5;
         private Label label3;
+        private System.Windows.Forms.Timer timer1;
     }
 }
