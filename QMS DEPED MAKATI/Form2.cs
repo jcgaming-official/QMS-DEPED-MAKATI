@@ -41,7 +41,8 @@ namespace QMS_DEPED_MAKATI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form4 f4 = new Form4();
+            f4.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

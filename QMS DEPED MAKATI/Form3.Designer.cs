@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button1 = new Button();
             textBox1 = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            button1 = new Button();
             panel2 = new Panel();
+            button2 = new Button();
+            groupBox1 = new GroupBox();
             label3 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -50,6 +52,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(343, 630);
             panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.SkyBlue;
+            button1.Location = new Point(156, 142);
+            button1.Name = "button1";
+            button1.Size = new Size(103, 41);
+            button1.TabIndex = 4;
+            button1.Text = "Add";
+            button1.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -76,23 +88,35 @@
             label1.TabIndex = 1;
             label1.Text = "Add Queue";
             // 
-            // button1
-            // 
-            button1.Location = new Point(156, 142);
-            button1.Name = "button1";
-            button1.Size = new Size(103, 41);
-            button1.TabIndex = 4;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(groupBox1);
             panel2.Controls.Add(label3);
             panel2.Dock = DockStyle.Right;
             panel2.Location = new Point(641, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(502, 630);
             panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.OrangeRed;
+            button2.Location = new Point(213, 563);
+            button2.Name = "button2";
+            button2.Size = new Size(103, 41);
+            button2.TabIndex = 5;
+            button2.Text = "Remove";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Location = new Point(7, 42);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(483, 496);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
             // 
             // label3
             // 
@@ -107,6 +131,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Khaki;
             ClientSize = new Size(1143, 630);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -131,5 +156,7 @@
         private Button button1;
         private Panel panel2;
         private Label label3;
+        private Button button2;
+        private GroupBox groupBox1;
     }
 }
