@@ -131,5 +131,6 @@
         private Button button3;
         private Button button2;
         private Button button1;
+        private CheckBox checkBoxTopMostForm2checkBox1;
     }
 }

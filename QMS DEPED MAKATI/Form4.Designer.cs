@@ -31,8 +31,9 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             panel1 = new Panel();
-            groupBox1 = new GroupBox();
+            listBox1 = new ListBox();
             label1 = new Label();
+            panel6 = new Panel();
             panel2 = new Panel();
             panel5 = new Panel();
             label4 = new Label();
@@ -42,7 +43,6 @@
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
-            panel6 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
@@ -52,7 +52,7 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(listBox1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(panel6);
             panel1.Dock = DockStyle.Left;
@@ -61,16 +61,14 @@
             panel1.Size = new Size(301, 741);
             panel1.TabIndex = 0;
             // 
-            // groupBox1
+            // listBox1
             // 
-            groupBox1.BackgroundImageLayout = ImageLayout.None;
-            groupBox1.Dock = DockStyle.Fill;
-            groupBox1.Location = new Point(0, 80);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(301, 661);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 21;
+            listBox1.Location = new Point(0, 80);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(301, 676);
+            listBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -81,6 +79,14 @@
             label1.Size = new Size(159, 33);
             label1.TabIndex = 0;
             label1.Text = "Queue List:";
+            // 
+            // panel6
+            // 
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(301, 80);
+            panel6.TabIndex = 0;
             // 
             // panel2
             // 
@@ -104,12 +110,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(18, 17);
+            label4.Location = new Point(5, 17);
             label4.Name = "label4";
             label4.Size = new Size(50, 21);
             label4.TabIndex = 2;
             label4.Text = "Date";
-            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -167,14 +172,6 @@
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
-            // panel6
-            // 
-            panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(0, 0);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(301, 80);
-            panel6.TabIndex = 0;
-            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
@@ -214,7 +211,7 @@
         private Label label3;
         private System.Windows.Forms.Timer timer1;
         private Label label4;
-        private GroupBox groupBox1;
         private Panel panel6;
+        private ListBox listBox1;
     }
 }

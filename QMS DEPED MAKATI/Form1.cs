@@ -1,3 +1,6 @@
+using Google.Cloud.Firestore;
+using QMS_DEPED_MAKATI.Classes;
+
 namespace QMS_DEPED_MAKATI
 {
     public partial class Form1 : Form
@@ -49,20 +52,35 @@ namespace QMS_DEPED_MAKATI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //if the credentials are correct
-            if (textBox1.Text == "deped" && textBox2.Text == "makati")
+            string username = textBox1.Text.Trim();
+            string password = textBox2.Text;
+
+            var db = FirestoreHelper.Database;
+            DocumentReference docRef = db.Collection("UserData").Document(username);
+            UserData data = docRef.GetSnapshotAsync().Result.ConvertTo<UserData>();
+
+            if (data != null)
             {
-                Form2 f2 = new Form2();
-                f2.Show();
-                this.Hide();
+                if (password == Security.Decrypt(data.Password))
+                {
+                    MessageBox.Show("Login Success");
+                    Form2 f2 = new Form2();
+                    f2.ShowDialog();
+                    Close();
+                }
+
+                else
+                {
+                    MessageBox.Show("Login Failed");
+                }
             }
+
             else
             {
-                //if the credentials are incorrect
-                MessageBox.Show("Incorrect username or password");
-                textBox1.Text = "";
-                textBox2.Text = "";
+                MessageBox.Show("Login Failed");
             }
+
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -80,6 +98,19 @@ namespace QMS_DEPED_MAKATI
                 // Programmatically click the login button
                 button1.PerformClick();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
+            RegisterForm form = new RegisterForm();
+            form.ShowDialog();
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = textBox2.Text = "";
         }
     }
 }

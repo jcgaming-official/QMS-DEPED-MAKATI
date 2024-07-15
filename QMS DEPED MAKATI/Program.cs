@@ -1,3 +1,5 @@
+using QMS_DEPED_MAKATI.Classes;
+
 namespace QMS_DEPED_MAKATI
 {
     internal static class Program
@@ -10,6 +12,7 @@ namespace QMS_DEPED_MAKATI
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            FirestoreHelper.SetEnvironmentVariable();
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
